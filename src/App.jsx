@@ -13,8 +13,8 @@ function App() {
   const [continentDropdownOpen, setContinentDropdownOpen] = useState(false);
   const [levelDropdownOpen, setLevelDropdownOpen] = useState(false);
 
-  const PPPURL = `https://travel-calculator-lake.vercel.app/api/price-level`;
-  const levelURL = `https://travel-calculator-lake.vercel.app//api/advisories`;
+  const PPPURL = `https://travel-calculator-4dz0.onrender.com/api/price-level`;
+  const levelURL = `https://travel-calculator-4dz0.onrender.com/api/advisories`;
 
   useEffect(() => {
     async function fetchPPP() {
