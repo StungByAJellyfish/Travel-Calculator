@@ -39,6 +39,9 @@ app.get("/api/price-level", async (req, res) => {
         const data = await response.json();
         
         res.json(data);
+
+        console.log("Data accessed from World Bank");
+        
     } catch (err) {
         console.error("Proxy error:", err);
         res.status(500).json({ error: "Failed to fetch World Bank data" });
@@ -71,6 +74,9 @@ app.get("/api/advisories", async (req, res) => {
         });
         
         res.json(advisoryMap);
+
+console.log("Data accessed from DoS");
+        
     } catch (err) {
         console.error("Advisory levels fetch error:", err);
         res.status(500).json({ error: "Failed to fetch travel advisories" });
