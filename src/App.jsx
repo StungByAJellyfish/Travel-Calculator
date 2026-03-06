@@ -13,9 +13,8 @@ function App() {
   const [continentDropdownOpen, setContinentDropdownOpen] = useState(false);
   const [levelDropdownOpen, setLevelDropdownOpen] = useState(false);
 
-  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:3001";
-  const PPPURL = `${API_BASE}/api/price-level`;
-  const levelURL = `${API_BASE}/api/advisories`;
+  const PPPURL = `https://travel-calculator-lake.vercel.app/api/price-level`;
+  const levelURL = `https://travel-calculator-lake.vercel.app//api/advisories`;
 
   useEffect(() => {
     async function fetchPPP() {
