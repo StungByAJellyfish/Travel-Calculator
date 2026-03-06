@@ -13,8 +13,9 @@ function App() {
   const [continentDropdownOpen, setContinentDropdownOpen] = useState(false);
   const [levelDropdownOpen, setLevelDropdownOpen] = useState(false);
 
-  const PPPURL = "http://localhost:3001/api/price-level";
-  const levelURL = "http://localhost:3001/api/advisories";
+  const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:3001";
+  const PPPURL = `${API_BASE}/api/price-level`;
+  const levelURL = `${API_BASE}/api/advisories`;
 
   useEffect(() => {
     async function fetchPPP() {
